@@ -1,0 +1,42 @@
+.status-image{
+    width: 50px;
+
+}
+
+.heading-status {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: white;
+    color: black;
+    justify-content: space-evenly;
+    border: 1px solid black;  
+}
+
+h4 {
+  margin: 5px auto; 
+  width: fit-content;
+  font-size: 18px;
+}
+    .jobColumns {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+ .jobColumns__jobColumn {
+  width : 33%;
+  background: rgb(213, 209, 209); 
+  
+}
+@media only screen and (max-width: 1200px) { 
+    .jobColumns {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .jobColumns__jobColumn {
+  width: 100%;
+}
+}

@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+@import  url('/src/components/reset.css' );
+
+
+
+#root{
+  width: 100%;
+}
+body{
+  width: 100%;
+  		    font-family: "Arial", sans-serif ;
+
+}
+ 
+.app {
+  text-align: left;
+    width: 100%;
+         max-width: 1200px;
+         min-width: 320px;
+         margin:0 auto;
+
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box ;
+  
+
+ 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.displayNone{
+  display: none;
+}
+ul{
+   display:flex;
+  flex-direction: column;
+  margin-block-start: 0;
+    padding-inline-start: 0;
+}
+li{
+  list-style: none;
+}
+.green{
+  color: black;
+  background-color: white;
+   border: 3px solid green;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dynamic-Jobs-manager{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+   justify-content: center;
+    width: 100%;
+
 }
 
-.App-link {
-  color: #61dafb;
+button:has(+ input){
+  display: inline-block;
+  width: 100%;
+ }
+
+ label + button{
+   margin-left: 1rem;
+ }
+
+ 
+
+.orange{
+   background-color: white;
+ color: black;
+ 
+   border: 3px solid orange;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jobColumns {
+  display: flex;
+  flex-direction: row;
+  width:   100%  ;
+ 
+  
+  display: flex;
 }
+
+
+
+.red {
+  background-color: white;
+   color: black;
+    border: 3px solid red;
+ }
+.job-list{
+  width: 100%;
+  } 

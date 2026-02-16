@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    border: 1px solid black;
+    background: #54119c;
+}
+h1{
+  font-size: clamp(18px, 5vw, 30px);
+  text-align: center;
+}
+
+
+h2{
+    font-size: 19px;
+    text-align: center;
+
+}
+.logo{
+  width: clamp(40px, 50vw, 50px);
+  height: auto;
+}
+
+ header{
+      flex-direction: row;
+     justify-content: space-evenly;
+      padding: 10px;
+    
+    }
+ 
