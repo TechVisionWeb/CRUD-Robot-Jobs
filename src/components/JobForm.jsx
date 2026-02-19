@@ -23,7 +23,6 @@ export const JobForm = () => {
     const [newJob, setNewJob] = useState({ id: '', name: '', notes: '' , status: '' });
     const [newSearchJob, setNewSearchJob] = useState({ id: '', name: ''});
 
-   console.log(newJob.name) ;
 
     return (
         <div className="form-container">
@@ -130,8 +129,8 @@ export const JobForm = () => {
                                 value={newSearchJob.name} 
                                  onChange={(e) => handleInputNew(e, setNewSearchJob)}
                                 type="search"/>
-                    <JobButton key={"Add/Update Job"} className="button button--wide-width"  title={"Add/Update Job"} name={"Add/Update job"}  handleInputNew={() => addJobToList(jobs, newJob, setJobs, setNewJob)} /> 
-                    <JobButton key={"Save Job List"} className="button button--wide-width"  title={"Save Job List"} name={"Save Job List"}  handleInputNew={() =>  { window.confirm("Are you sure you wnat to save. Can't undo")  ?  window.alert("Save is done", localStorage.setItem("CharlotteProjectJobsSaveNow", JSON.stringify(jobs))) : window.alert("Save is stopped or no jobs to save")  }} /> 
+                    <JobButton key={"Add/Update Job"} className="button button--wide-width"  title={"Add/Update Job"} name={"Add/Update job"}  handleInputNew={() => { newJob.status !== "Options" ? addJobToList(jobs, newJob, setJobs, setNewJob)     : window.alert('Must not pick status  "options" to udpate. Choose another status')     }}/> 
+                    <JobButton key={"Save Job List"} className="button button--wide-width"  title={"Save Job List"} name={"Save Job List"}  handleInputNew={() =>  { window.confirm("Are you sure you want to save the job List? Can't undo")  ?  window.alert("Save is done", localStorage.setItem("CharlotteProjectJobsSaveNow", JSON.stringify(jobs))) : window.alert("Save is stopped or no jobs to save")  }} /> 
                </fieldset>
         </div>
                 <br />
