@@ -2,7 +2,7 @@ export const addJobToList = (jobs, newJob, setJobs, setNewJob) => {
    const { id, name, status, notes } = newJob;
 
    if (!id || !name || !status ||  status !== "Options" || !notes) {
-    alert('Please fill in all of the fields for a new job (dont pick the status git  "options")  or change a status for an existing job.');
+    alert('Please fill in all of the fields for a new job (do not pick the status "options")  or change a status for an existing job.');
     return;
   }
 
