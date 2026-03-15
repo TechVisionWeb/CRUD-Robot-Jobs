@@ -19,7 +19,7 @@ export const addJobToList = (jobs, newJob, setJobs, setNewJob) => {
     console.log(`New job with id ${id} added.`);
   }
 
-   setNewJob({ id: "", name: "", status: "", notes: " " });
+   setNewJob({ id: "", name: "", status: "", notes: "" });
 };
 
 export default addJobToList;
