@@ -12,12 +12,10 @@ export const addJobToList = (jobs, newJob, setJobs, setNewJob) => {
      if (window.confirm(`Do you want to change the job with id: ${id}?`)) {
         const updatedJobs = jobs.map(job => (job.id === id ? newJob : job));
       setJobs(updatedJobs);
-      console.log(`Job with id ${id} updated to status: ${status}.`);
-    }
+     }
   } else {
       setJobs([...jobs, newJob]);
-    console.log(`New job with id ${id} added.`);
-  }
+   }
 
    setNewJob({ id: "", name: "", status: "", notes: "" });
 };
